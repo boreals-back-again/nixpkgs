@@ -40,6 +40,10 @@ stdenv.mkDerivation (finalAttrs: {
     kdePackages.qtsvg
   ];
 
+  patches = [
+    ./fix_cmake_dirs.patch
+  ];
+
   meta = {
     description = "Old-school all-digital polyphonic sampler synthesizer with stereo fx";
     mainProgram = "samplv1_jack";
